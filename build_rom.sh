@@ -1,16 +1,17 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u git://github.com/DotOS/manifest.git -b dot11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/MiDoNaSR545/mainfest_personal.git --depth 1 -b dot .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u git://github.com/AOSiP/platform_manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/flashokiller/mainfest_personal --depth 1 -b master .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
-lunch dot_ysl-user
+lunch aosip_ysl-userdebug
+time m kronic
+
+# If you would like to include gapps in your build, after lunching device enter:
 export WITH_GAPPS=true
-make bacon
+
 
 # upload rom
-rclone copy out/target/product/ysl/dotOS-R-v5.1-ysl-GAPPS*.zip cirrus:ysl -P
+rclone copy out/target/product/ysl/2021*.zip cirrus:ysl -P
 
-# upload rom
-# rclone copy out/target/product/ysl/dotOS-R-v5.1-ysl-OFFICIAL*.zip cirrus:ysl -P
