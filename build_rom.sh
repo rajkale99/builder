@@ -8,10 +8,8 @@ source build/envsetup.sh
 lunch aosip_ysl-userdebug
 time m kronic
 
-# If you would like to include gapps in your build, after lunching device enter:
-export WITH_GAPPS=true
 
 
 # upload rom
-rclone copy out/target/product/ysl/2021*.zip cirrus:ysl -P
+rclone copy out/target/product/ysl/*.zip cirrus:ysl -P
 
