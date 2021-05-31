@@ -1,7 +1,7 @@
 # sync rom
 repo init -u https://github.com/PotatoProject/manifest -b dumaloo-release --depth=1 --no-repo-verify -g default,-device,-mips,-darwin,-notdefault
 git clone https://github.com/cArN4gEisDeD/local_manifest --depth=1 -b POSP .repo/local_manifests
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8 
 
 # patches
 #cd external/selinux
