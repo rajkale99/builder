@@ -1,5 +1,5 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -urepo init -u https://github.com/descendant-xi/manifests.git -b eleven-staging -g default,-device,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/descendant-xi/manifests.git -b eleven-staging -g default,-device,-mips,-darwin,-notdefault
 
 git clone https://github.com/Yasundram/local_manifest --depth=1 -b main .repo/local_manifests
 
