@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch du_mido-user
-export WITH_GMS=true
+#export WITH_GMS=true
 export TZ=Asia/Kolkata
 mka bacon
 
