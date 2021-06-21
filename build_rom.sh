@@ -6,6 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
  source build/envsetup.sh
 lunch cygnus_lavender-userdebug
+export TZ=Asia/Dhaka #put before last build command (Time zone)
 make cygnus -j$(nproc --all)
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
