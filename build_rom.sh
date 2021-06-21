@@ -7,7 +7,8 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
  . build/envsetup.sh
 lunch nezuko_lavender-userdebug
 export TZ=Asia/Dhaka #put before last build command (Time zone)
-export SELINUX_IGNORE_NEVERALLOWS=True
+export SELINUX_IGNORE_NEVERALLOWS=true
+export IS_CIENV=true
 mka bacon -jX
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
