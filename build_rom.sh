@@ -1,6 +1,8 @@
 # sync rom
-repo init --depth=1 --no-repo-verify -u https://github.com/cygnus-rom/manifest.git -b caf-11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/mukulsharma06175/frostmanifest.git -b Cygnus .repo/local_manifests
+repo init --depth=1 --no-repo-verify -u https://github.com/PixelExtended/manifest -b eleven
+
+ -g default,-device,-mips,-darwin,-notdefault
+git clone https://github.com/mukulsharma06175/local_manifests.git -b PixelExoerience .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
