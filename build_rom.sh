@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch revengeos_platina-userdebug
+lunch revengeos_platina-eng
 export SKIP_API_CHECK=true
 export SKIP_ABI_CHECK=true
 export TZ=Asia/Jakarta
