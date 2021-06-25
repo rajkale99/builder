@@ -1,12 +1,12 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/RevengeOS/android_manifest.git -b r11.0 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/D4rkKnight21/local_manifest.git --depth 1 -b revengeos .repo/local_manifests
+git clone https://github.com/D4rkKnight21/local_manifest.git --depth 1 -b ros .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 source build/envsetup.sh
 export SELINUX_IGNORE_NEVERALLOWS=true
-lunch revengeos_platina-eng
+lunch revengeos_platina-userdebug
 export SKIP_API_CHECK=true
 export SKIP_ABI_CHECK=true
 export TZ=Asia/Jakarta
