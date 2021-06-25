@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 . build/envsetup.sh
 lunch nezuko_lavender-userdebug
-export TZ=Asia/kolkata #put before last build command (Time zone)
+export TZ=Asia/kolkata #put before last build command (Time)
 export USE_GAPPS=true
 mka bacon -j$(nproc --all)
 
