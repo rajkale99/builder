@@ -6,7 +6,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # build rom
 source build/envsetup.sh
 lunch havoc_lavender-userdebug
-export TZ=Asia/Kolkata #put before last build command (Time)
+export TZ=Asia/Kolkata #put before last build command (Time zone)
 export WITH_GAPPS=true 
 mka bacon
 
