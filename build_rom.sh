@@ -7,7 +7,6 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 source build/envsetup.sh
 lunch corvus_RMX1801-eng
 export TZ=Asia/Kolkata 
-export SELINUX_IGNORE_NEVERALLOWS=true
 make corvus
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
