@@ -5,7 +5,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 
 # build rom
 source build/envsetup.sh
-lunch fluid_G-userdebug
+lunch fluid_holland2-userdebug
 export TZ=Asia/Kolkata #put before last build command (setting timezone)
 mka bacon
 
