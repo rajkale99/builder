@@ -7,7 +7,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 . build/envsetup.sh
 lunch komodo_lavender-userdebug
 export TZ=Asia/kolkata #put before last build command (Time zone)
-export KOMODO_GAPPS_TYPE = gapps
+export KOMODO_GAPPS_TYPE := GAPPS
 masak komodo
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
