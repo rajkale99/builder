@@ -1,12 +1,12 @@
 # sync rom
 repo init --depth=1 --no-repo-verify -u https://github.com/Project-LegionOS/manifest.git -b 11 -g default,-device,-mips,-darwin,-notdefault
-git clone https://github.com/Prashant-1695/frostmanifest --depth 1 -b crdroid .repo/local_manifests
+git clone https://github.com/Prashant-1695/frostmanifest --depth 1 -b legion .repo/local_manifests
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # build rom
 . build/envsetup.sh
 lunch legion_lavender-userdebug
-export TZ=Asia/Dhaka #put before last build command's
+export TZ=Asia/Dhaka #put before last build command
 make legion
 
 # upload rom (if you don't need to upload multiple files, then you don't need to edit next line)
